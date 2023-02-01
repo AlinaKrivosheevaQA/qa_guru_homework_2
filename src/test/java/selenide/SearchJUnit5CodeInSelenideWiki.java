@@ -21,8 +21,8 @@ public class SearchJUnit5CodeInSelenideWiki {
 
         open("/selenide/selenide");
         $("ul.UnderlineNav-body li.d-inline-flex a#wiki-tab").click();
-        $(".markdown-body").shouldHave(text("Soft assertions"));
-        $(".markdown-body").$(byText("Soft assertions")).click();
+        $("#wiki-pages-filter").setValue("SoftAssertions");
+        $("#wiki-pages-box").$(byText("SoftAssertions")).click();
         $("div#wiki-content").shouldHave(text("2. Using JUnit4 just describe rule inside test class:"));
 
     }
